@@ -5,7 +5,7 @@ export default defineAstroPaperConfig({
     url: "https://wanxin-blog.pages.dev/",
     title: "Wanxin's Blog",
     description: "wanxin_l 的个人博客：记录技术学习与生活思考。",
-    author: "wanxin_l",
+    author: "Wanxin",
     ogImage: "default-og.jpg",
     lang: "zh-CN",
     timezone: "Asia/Shanghai",
