@@ -22,18 +22,17 @@ export default defineAstroPaperConfig({
     dynamicOgImage: false,
     showArchives: true,
     showBackButton: true,
-    // TODO: 推送到 GitHub 后，改为你的仓库编辑地址并启用
     editPost: {
-      enabled: false,
-      url: "",
+      enabled: true,
+      url: "https://github.com/Wanxinlay/my-blog/edit/main/",
     },
     search: "pagefind",
     toc: true,
   },
-  // TODO: 按需添加你的社交链接，例如：
-  // { name: "github", url: "https://github.com/你的用户名" },
-  // { name: "mail", url: "mailto:你的邮箱" },
-  socials: [],
+  socials: [
+    { name: "github", url: "https://github.com/Wanxinlay" },
+    // 按需添加，例如：{ name: "mail", url: "mailto:你的邮箱" },
+  ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },
     { name: "facebook", url: "https://www.facebook.com/sharer.php?u=" },
