@@ -2,8 +2,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    // TODO: 首次部署拿到 *.pages.dev 地址后，把这里改成你的真实站点地址
-    url: "https://my-blog.pages.dev/",
+    url: "https://wanxin-blog.pages.dev/",
     title: "Wanxin'Blog",
     description: "wanxin_l 的个人博客：记录技术学习与生活思考。",
     author: "wanxin_l",
