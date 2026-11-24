@@ -1,6 +1,7 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { fontData, experimental_getFontFileURL } from "astro:assets";
+import type { FontData } from "astro:assets";
 import satori from "satori";
 import sharp from "sharp";
 import { getFontPathByWeight } from "@/utils/getFontPathByWeight";
@@ -28,7 +29,9 @@ export const GET: APIRoute = async ({ props, url }) => {
     return new Response(null, { status: 404, statusText: "Not found" });
   }
 
-  const fonts = fontData["--font-google-sans-code"];
+  // 未配置任何在线字体时 fontData 为空；dynamicOgImage 关闭时不会生成此端点
+  const fonts =
+    (fontData as Record<string, FontData[]>)["--font-google-sans-code"] ?? [];
   const regularFontPath = getFontPathByWeight(fonts, 400);
   const boldFontPath = getFontPathByWeight(fonts, 700);
 
